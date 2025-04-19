@@ -1,5 +1,4 @@
-import { useDynamicContext } from '@dynamic-labs/sdk-react-core';
-import { ConnectButton } from '@dynamic-labs/sdk-react-ui';
+import { ConnectButton, useDynamicContext } from '@dynamic-labs/sdk-react';
 import SendEthForm from './SendEthForm';
 import { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
