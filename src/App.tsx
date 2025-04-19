@@ -12,6 +12,7 @@ const DynamicApp = () => {
     primaryWallet,
     isAuthenticated,
     setShowAuthFlow,
+    logout, // ✅ added logout
   } = useDynamicContext();
 
   const [ethBalance, setEthBalance] = useState<string>('');
@@ -77,7 +78,24 @@ const DynamicApp = () => {
             style={{ display: 'block', margin: '10px 0', width: '300px' }}
           />
 
-          <button onClick={sendETH}>Send ETH</button>
+          <button onClick={sendETH} style={{ marginRight: '10px' }}>
+            Send ETH
+          </button>
+
+          {/* ✅ Logout Button */}
+          <button
+            onClick={logout}
+            style={{
+              backgroundColor: '#e74c3c',
+              color: 'white',
+              padding: '8px 16px',
+              border: 'none',
+              borderRadius: '4px',
+              cursor: 'pointer',
+            }}
+          >
+            Logout
+          </button>
         </div>
       )}
     </div>
