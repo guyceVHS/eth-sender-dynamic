@@ -12,7 +12,7 @@ const DynamicApp = () => {
     primaryWallet,
     isAuthenticated,
     setShowAuthFlow,
-    logout, // ✅ added logout
+    logout,
   } = useDynamicContext();
 
   const [ethBalance, setEthBalance] = useState<string>('');
@@ -78,14 +78,11 @@ const DynamicApp = () => {
             style={{ display: 'block', margin: '10px 0', width: '300px' }}
           />
 
-          <button onClick={sendETH} style={{ marginRight: '10px' }}>
-            Send ETH
-          </button>
-
-          {/* ✅ Logout Button */}
+          <button onClick={sendETH}>Send ETH</button>
           <button
             onClick={logout}
             style={{
+              marginLeft: '10px',
               backgroundColor: '#e74c3c',
               color: 'white',
               padding: '8px 16px',
@@ -106,7 +103,7 @@ const App = () => {
   return (
     <DynamicContextProvider
       settings={{
-        environmentId: 'b6cdbe7d-7c1b-4cb6-b03c-82551f074c9e', // your env ID
+        environmentId: 'b6cdbe7d-7c1b-4cb6-b03c-82551f074c9e',
         walletConnectors: [EthereumWalletConnectors],
         authMode: 'email',
       }}
