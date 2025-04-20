@@ -79,20 +79,24 @@ const DynamicApp = () => {
           />
 
           <button onClick={sendETH}>Send ETH</button>
-          <button
-            onClick={logout}
-            style={{
-              marginLeft: '10px',
-              backgroundColor: '#e74c3c',
-              color: 'white',
-              padding: '8px 16px',
-              border: 'none',
-              borderRadius: '4px',
-              cursor: 'pointer',
-            }}
-          >
-            Logout
-          </button>
+<button
+  onClick={() => {
+    disconnectWallet();
+    logout();
+  }}
+  style={{
+    marginLeft: '10px',
+    backgroundColor: '#e74c3c',
+    color: 'white',
+    padding: '8px 16px',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
+  }}
+>
+  Logout
+</button>
+
         </div>
       )}
     </div>
